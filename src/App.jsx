@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
+import { observable } from 'mobx';
+
 import { observer } from 'mobx-react';
 import DevTools from 'mobx-react-devtools';
+import ReactDOM from 'react-dom';
+
+import rSlider from 'rslider';
 
 @observer
 class App extends Component {
