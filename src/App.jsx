@@ -1,29 +1,14 @@
-import { Component } from 'react';
-import { observable } from 'mobx';
-
+import React from 'react';
 import { observer } from 'mobx-react';
 import DevTools from 'mobx-react-devtools';
-import ReactDOM from 'react-dom';
 
 import rSlider from 'rslider';
-const {RSlider, RSliderArrowL, RSliderArrowR, RSliderItems, RSliderPagination} = rSlider;
-
 
 @observer
-class App extends Component {
+class App extends React.Component {
   render() {
     return (
-      <div>
-      <RSlider name="example1">
-        <RSliderItems>
-              <div>item 1</div>
-              <div>item 2</div>
-          </RSliderItems>
-   
-          <RSliderArrowL />
-          <RSliderArrowR />
-          <RSliderPagination />
-      </RSlider>
+      <div> 
         <button onClick={this.onReset}>
           Seconds passed: {this.props.appState.timer}
         </button>
